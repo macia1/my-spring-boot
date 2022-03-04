@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--suppress SpringFacetInspection -->
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:p="http://www.springframework.org/schema/p" xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/tx 
+       http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd"
+       default-lazy-init="true">
+
+
+	<!-- mtp -->
+<!--	<context:component-scan base-package="com.common">-->
+<!--		&lt;!&ndash; dataBase &ndash;&gt;-->
+<!--		<context:include-filter type="regex" expression=".*DaoImpl" />-->
+<!--		<context:include-filter type="regex" expression=".*DAOImpl" />-->
+<!--		<context:include-filter type="regex" expression=".*BoImpl" />-->
+<!--		<context:include-filter type="regex" expression=".*BOImpl" />-->
+<!--		&lt;!&ndash; bean &ndash;&gt;-->
+<!--		<context:include-filter type="regex" expression=".*Action" />-->
+<!--		<context:include-filter type="regex" expression=".*Trade" />-->
+<!--		<context:include-filter type="regex" expression=".*Factory" />-->
+<!--		<context:include-filter type="regex" expression=".*FactoryImpl" />-->
+<!--		<context:include-filter type="regex" expression=".*Transaction" />-->
+<!--		<context:include-filter type="annotation" expression="org.springframework.stereotype.Component" />-->
+<!--	</context:component-scan>-->
+	<context:component-scan base-package="com.base"/>
+	<bean id="bean" class="com.base.jar.test.Bean" lazy-init="true"/>
+
+	<bean id="dbConf" class="com.base.conf.DataBaseConf" lazy-init="false">
+		<property name="url" value="${zgs.db.url}"/>
+		<property name="user" value="${zgs.db.user}"/>
+		<property name="password" value="${zgs.db.password}"/>
+	</bean>
+
+</beans>

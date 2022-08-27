@@ -6,7 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * @author zengguosheng
+ * @author zenggs
  * @Date 2022/2/23 9:19
  */
 public class MySpringBootTest {

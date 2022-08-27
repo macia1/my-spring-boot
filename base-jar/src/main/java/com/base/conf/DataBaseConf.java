@@ -1,7 +1,7 @@
 package com.base.conf;
 
 /**
- * @author zengguosheng
+ * @author zenggs
  * @Date 2022/3/4 16:31
  */
 public class DataBaseConf {

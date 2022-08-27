@@ -1,7 +1,7 @@
 package com.base.jar.test;
 
 /**
- * @author zengguosheng
+ * @author zenggs
  * @Date 2022/2/23 9:06
  */
 public class Bean {
